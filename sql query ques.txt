@@ -1,0 +1,9 @@
+1.Retrieve Event Details for a Specific Event:  SELECT * FROM Event WHERE EventID = 1;
+
+2.Retrieve Event Details with Venue Information: SELECT Event.EventName, Event.EventDate, Venue.VenueName, Venue.Address, Venue.City, Venue.State FROM Event INNER JOIN Venue ON Event.VenueID = Venue.VenueID;
+
+3. Retrieve Upcoming Events: SELECT EventName, EventDate FROM Event WHERE EventDate > CURDATE() ORDER BY EventDate;
+
+4. Retrieve Events Organized by a Specific Organizer: SELECT EventName, EventDate FROM Event WHERE OrganizerID = 202;
+
+5.Retrieve Event Categories and Descriptions:SELECT CategoryName, Description FROM EventCategory;
